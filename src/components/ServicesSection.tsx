@@ -1,24 +1,31 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import serviceInjectables from "@/assets/service-injectables.jpg";
-import serviceSkin from "@/assets/service-skin.jpg";
-import serviceBody from "@/assets/service-body.jpg";
+import serviceBotox from "@/assets/service-botox.webp";
+import serviceFillers from "@/assets/service-fillers.webp";
+import serviceLasers from "@/assets/service-lasers.webp";
+import serviceSkincare from "@/assets/service-skincare.webp";
 
 const services = [
   {
-    image: serviceInjectables,
-    title: "BOTOX®, DAXXIFY® & Fillers",
+    image: serviceBotox,
+    title: "BOTOX® & DAXXIFY®",
     description:
-      "BOTOX® & DAXXIFY® provide solutions for many signs of aging, while fillers and Skinvive restore volume, improve facial symmetry, and return balance to your face.",
+      "BOTOX® and DAXXIFY® are almost unbeatable when it comes to reducing fine lines and wrinkles. A cost-effective treatment with little downtime that rejuvenates and prevents further damage.",
   },
   {
-    image: serviceSkin,
+    image: serviceFillers,
+    title: "Fillers & Skinvive",
+    description:
+      "With JUVÉDERM®, RHA, and Skinvive, discover a more youthful appearance. We use various facial volumizers to smooth lines, plump up wrinkles and restore harmony to your face.",
+  },
+  {
+    image: serviceLasers,
     title: "Light Therapy, Lasers & Peels",
     description:
       "Repair and renew damaged skin with our advanced light therapy, laser treatments, and chemical peels for a radiant, rejuvenated complexion.",
   },
   {
-    image: serviceBody,
+    image: serviceSkincare,
     title: "Therapeutic Skincare",
     description:
       "Products backed by true science that complement non-surgical treatments. Our experienced skincare professionals create a customized regimen for your skin's needs.",
@@ -41,13 +48,13 @@ const ServicesSection = () => {
           Explore Our Most-Requested Treatments
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 * i }}
+              transition={{ duration: 0.8, delay: 0.15 * i }}
               className="group"
             >
               <div className="overflow-hidden mb-6">
@@ -58,7 +65,7 @@ const ServicesSection = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-serif text-xl text-foreground mb-3">{service.title}</h3>
+              <h3 className="font-serif text-lg text-foreground mb-3">{service.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed font-light mb-4">
                 {service.description}
               </p>

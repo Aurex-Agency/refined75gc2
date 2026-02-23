@@ -1,24 +1,18 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import baBotox from "@/assets/ba-botox.webp";
+import baInjectables from "@/assets/ba-injectables.webp";
+import baFillers from "@/assets/ba-fillers.webp";
 
 const results = [
-  { treatment: "Lip Enhancement", concern: "Volume & Definition" },
-  { treatment: "Forehead Relaxer", concern: "Fine Lines & Wrinkles" },
-  { treatment: "Cheek Filler", concern: "Volume Loss & Contour" },
+  { image: baBotox, treatment: "BOTOX® & DAXXIFY®", concern: "Fine Lines & Wrinkles" },
+  { image: baInjectables, treatment: "Advanced Injections", concern: "Facial Rejuvenation" },
+  { image: baFillers, treatment: "Fillers & Skinvive", concern: "Volume & Symmetry" },
 ];
 
 const BeforeAfterSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [sliderValues, setSliderValues] = useState([50, 50, 50]);
-
-  const handleSlider = (index: number, value: number) => {
-    setSliderValues((prev) => {
-      const next = [...prev];
-      next[index] = value;
-      return next;
-    });
-  };
 
   return (
     <section ref={ref} className="py-24 md:py-32 bg-background">
@@ -37,7 +31,7 @@ const BeforeAfterSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-muted-foreground text-center mb-16 text-sm font-light"
         >
-          Drag the slider to see the transformation
+          See the transformations our expert team delivers every day
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -47,34 +41,14 @@ const BeforeAfterSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 * i }}
-              className="relative"
+              className="group"
             >
-              <div className="relative aspect-square bg-secondary overflow-hidden select-none">
-                {/* "After" side */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-primary text-xs tracking-widest uppercase font-sans">After</span>
-                </div>
-                {/* "Before" side with clip */}
-                <div
-                  className="absolute inset-0 bg-charcoal-lighter flex items-center justify-center"
-                  style={{ clipPath: `inset(0 ${100 - sliderValues[i]}% 0 0)` }}
-                >
-                  <span className="text-muted-foreground text-xs tracking-widest uppercase font-sans">Before</span>
-                </div>
-                {/* Slider line */}
-                <div
-                  className="absolute top-0 bottom-0 w-px bg-primary"
-                  style={{ left: `${sliderValues[i]}%` }}
-                />
-                {/* Invisible range slider */}
-                <input
-                  type="range"
-                  min={0}
-                  max={100}
-                  value={sliderValues[i]}
-                  onChange={(e) => handleSlider(i, Number(e.target.value))}
-                  className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-10"
-                  aria-label={`Before and after slider for ${result.treatment}`}
+              <div className="overflow-hidden">
+                <img
+                  src={result.image}
+                  alt={`${result.treatment} results`}
+                  className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
                 />
               </div>
               <div className="mt-4 text-center">
