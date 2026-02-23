@@ -1,13 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import StickyNav from "@/components/StickyNav";
+import HeroSection from "@/components/HeroSection";
+import EmpathySection from "@/components/EmpathySection";
+import ServicesSection from "@/components/ServicesSection";
+import BeforeAfterSection from "@/components/BeforeAfterSection";
+import AuthoritySection from "@/components/AuthoritySection";
+import LeadForm from "@/components/LeadForm";
+import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main>
+      <StickyNav />
+      <HeroSection />
+      <EmpathySection />
+      <ServicesSection />
+      <BeforeAfterSection />
+      <AuthoritySection />
+      <LeadForm />
+      <FAQSection />
+      <Footer />
+    </main>
   );
 };
 
