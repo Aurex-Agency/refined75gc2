@@ -28,8 +28,9 @@ const EmpathySection = () => {
         >
           You've invested in countless creams and serums, hoping to turn back the
           clock, only to feel disappointed by the results. At Refined Aesthetics,
-          we move beyond temporary fixes. We provide clinically-proven treatments
-          that deliver the lasting, natural-looking results you deserve.
+          we move beyond temporary fixes. Our team pays scrupulous attention to each
+          patient's goals and we take extra time to educate and ensure your understanding
+          of recommended treatments — delivering lasting, natural-looking results you deserve.
         </motion.p>
 
         <div className="gold-divider mt-16" />

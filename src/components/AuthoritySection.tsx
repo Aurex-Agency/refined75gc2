@@ -7,17 +7,17 @@ const differentiators = [
   {
     title: "Expert-Led Care",
     description:
-      "Our team is led by Dr. Adriana Reyes, a nationally recognized injector with over 15 years of experience in aesthetic medicine.",
+      "Our practice is led by Sarah Safa, MS, PA-C — a pioneer of facial aesthetics and one of the top expert injectors on the East Coast, having successfully trained over 6,000 aesthetic medical providers nationwide.",
   },
   {
     title: "Bespoke Treatment Plans",
     description:
-      "We don't believe in one-size-fits-all. Your journey begins with an in-depth consultation to create a plan tailored to your unique anatomy and goals.",
+      "We don't believe in one-size-fits-all. Your journey begins with an in-depth consultation to create a plan tailored to your unique anatomy and goals. We invest in ongoing training and mentorship for our entire team.",
   },
   {
-    title: "A Commitment to Natural Results",
+    title: "Non-Surgical Precision",
     description:
-      "Our philosophy is to enhance, not alter. We specialize in subtle, refined results that leave you looking like the best version of yourself.",
+      "Our practice is known for meticulous dexterity with laser treatments, advanced injections, and facial mapping — delivering perfectionist quality and natural-looking results. Experience matters.",
   },
 ];
 
@@ -46,7 +46,7 @@ const AuthoritySection = () => {
           >
             <img
               src={founderImage}
-              alt="Dr. Adriana Reyes, Lead Practitioner at Refined Aesthetics"
+              alt="Sarah Safa, MS, PA-C — Owner and Lead Practitioner at Refined Aesthetics"
               className="w-full aspect-[3/4] object-cover"
               loading="lazy"
             />

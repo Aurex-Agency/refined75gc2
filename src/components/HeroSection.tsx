@@ -17,7 +17,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground leading-tight mb-6"
         >
-          Your Journey to Timeless Beauty Begins Here
+          Feel Beautiful, Look Beautiful
         </motion.h1>
 
         <motion.p
@@ -26,8 +26,8 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="font-sans text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed font-light"
         >
-          Experience bespoke aesthetic treatments, artfully delivered by our expert
-          practitioners to enhance your natural radiance.
+          Inside Refined Aesthetics you'll find a cozy, relaxing space and warm, welcoming
+          faces — where experienced medical professionals deliver remarkable results every day.
         </motion.p>
 
         <motion.a
@@ -37,7 +37,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="inline-block bg-primary text-primary-foreground px-10 py-4 text-sm font-sans font-semibold tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
         >
-          Claim Your New Patient Offer — $150 Off
+          Claim Your $75 New Patient Gift Card
         </motion.a>
 
         <motion.div
@@ -46,11 +46,11 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 1.3 }}
           className="mt-12 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-muted-foreground text-xs tracking-wider uppercase font-sans"
         >
-          <span>Over 1,000 5-Star Reviews</span>
+          <span>Led by Sarah Safa, MS, PA-C</span>
           <span className="hidden md:inline text-primary">✦</span>
-          <span>Led by Top-Rated Nurse Injectors</span>
+          <span>Top Expert Injector on the East Coast</span>
           <span className="hidden md:inline text-primary">✦</span>
-          <span>As Seen in Luxe Living Magazine</span>
+          <span>6,000+ Providers Trained Nationwide</span>
         </motion.div>
       </div>
     </section>
