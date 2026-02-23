@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import founderImage from "@/assets/founder.jpg";
+import founderImage from "@/assets/sarah-safa.jpg";
 import { Check } from "lucide-react";
 
 const differentiators = [
