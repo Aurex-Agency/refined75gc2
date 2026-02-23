@@ -95,7 +95,7 @@ const BeforeAfterSection = () => {
             href="#book"
             className="text-primary text-xs font-sans font-semibold tracking-widest uppercase hover:text-gold-light transition-colors"
           >
-            See yourself in our results? Book your consultation →
+            Claim your $75 gift card and book your consultation →
           </a>
         </motion.p>
       </div>

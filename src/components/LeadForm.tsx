@@ -28,7 +28,7 @@ const LeadForm = () => {
           transition={{ duration: 0.8 }}
           className="font-serif text-3xl md:text-5xl text-foreground mb-4"
         >
-          Ready To Experience Beautiful?
+          Claim Your $75 New Patient Gift Card Today
         </motion.h2>
 
         <motion.p
@@ -76,7 +76,7 @@ const LeadForm = () => {
             type="submit"
             className="w-full bg-primary text-primary-foreground py-4 text-sm font-sans font-semibold tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
           >
-            Start My Transformation
+            Claim My $75 Gift Card
           </button>
         </motion.form>
 
