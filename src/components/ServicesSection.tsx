@@ -55,7 +55,7 @@ const ServicesSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.15 * i }}
-              className="group"
+              className="group flex flex-col h-full"
             >
               <div className="overflow-hidden mb-6">
                 <img
@@ -66,12 +66,12 @@ const ServicesSection = () => {
                 />
               </div>
               <h3 className="font-serif text-lg text-foreground mb-3">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed font-light mb-4">
+              <p className="text-muted-foreground text-sm leading-relaxed font-light mb-4 flex-grow">
                 {service.description}
               </p>
               <a
                 href="#book"
-                className="text-primary text-xs font-sans font-semibold tracking-widest uppercase hover:text-gold-light transition-colors"
+                className="text-primary text-xs font-sans font-semibold tracking-widest uppercase hover:text-gold-light transition-colors mt-auto"
               >
                 Claim Your $75 Gift Card →
               </a>
