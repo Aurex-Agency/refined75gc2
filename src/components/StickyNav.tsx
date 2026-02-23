@@ -28,7 +28,7 @@ const StickyNav = () => {
           href="#book"
           className="bg-primary text-primary-foreground px-6 py-2.5 text-xs font-sans font-semibold tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
         >
-          Book Consultation
+          Claim Your $75 Gift Card
         </a>
       </div>
     </motion.nav>

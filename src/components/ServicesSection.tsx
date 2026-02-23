@@ -66,7 +66,7 @@ const ServicesSection = () => {
                 href="#book"
                 className="text-primary text-xs font-sans font-semibold tracking-widest uppercase hover:text-gold-light transition-colors"
               >
-                Learn More →
+                Claim Your $75 Gift Card →
               </a>
             </motion.div>
           ))}
