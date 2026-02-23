@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-spa.jpg";
+import heroImage from "@/assets/hero-spa.webp";
 
 const HeroSection = () => {
   return (
@@ -24,10 +24,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="font-sans text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed font-light"
+          className="font-sans text-base md:text-lg text-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed font-normal"
         >
           Inside Refined Aesthetics you'll find a cozy, relaxing space and warm, welcoming
-          faces — where experienced medical professionals deliver remarkable results every day.
+          faces, where experienced medical professionals deliver remarkable results every day.
         </motion.p>
 
         <motion.a

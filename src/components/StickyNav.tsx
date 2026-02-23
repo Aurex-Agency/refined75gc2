@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import logo from "@/assets/ra-logo.jpg";
+import logo from "@/assets/ra-logo.png";
 
 const StickyNav = () => {
   const [scrolled, setScrolled] = useState(false);
