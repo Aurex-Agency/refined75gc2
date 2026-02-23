@@ -3,6 +3,7 @@ import { useRef } from "react";
 import baBotox from "@/assets/ba-botox.webp";
 import baSkincare from "@/assets/ba-skincare.webp";
 import baTreatment from "@/assets/ba-treatment.webp";
+import logo from "@/assets/ra-logo.png";
 
 const results = [
   { image: baBotox, treatment: "BOTOX® & DAXXIFY®", concern: "Fine Lines & Wrinkles" },
@@ -15,8 +16,16 @@ const BeforeAfterSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6">
+    <section ref={ref} className="relative py-24 md:py-32 overflow-hidden" style={{ backgroundColor: 'hsl(212 45% 9%)' }}>
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage: `url(${logo})`,
+          backgroundSize: '80px 80px',
+          backgroundRepeat: 'repeat',
+        }}
+      />
+      <div className="relative z-10 container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
