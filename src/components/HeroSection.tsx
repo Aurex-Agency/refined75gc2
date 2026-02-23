@@ -44,7 +44,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.3 }}
-          className="mt-12 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-muted-foreground text-xs tracking-wider uppercase font-sans"
+          className="mt-12 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-foreground/90 text-sm md:text-base tracking-wider uppercase font-sans font-medium"
         >
           <span>Led by Sarah Safa, MS, PA-C</span>
           <span className="hidden md:inline text-primary">✦</span>
