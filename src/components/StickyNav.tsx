@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import logo from "@/assets/ra-logo.jpg";
 
 const StickyNav = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,8 +21,8 @@ const StickyNav = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#" className="font-serif text-xl md:text-2xl tracking-widest text-foreground uppercase">
-          Refined <span className="text-primary">Aesthetics</span>
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="Refined Aesthetics" className="h-10 md:h-12" />
         </a>
         <a
           href="#book"

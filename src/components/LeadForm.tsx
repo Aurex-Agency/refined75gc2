@@ -28,7 +28,7 @@ const LeadForm = () => {
           transition={{ duration: 0.8 }}
           className="font-serif text-3xl md:text-5xl text-foreground mb-4"
         >
-          Ready to Reveal Your Radiance?
+          Ready To Experience Beautiful?
         </motion.h2>
 
         <motion.p
@@ -38,7 +38,7 @@ const LeadForm = () => {
           className="text-muted-foreground text-sm font-light mb-12"
         >
           Complete the form below to book your complimentary consultation and claim
-          your $150 new patient credit.
+          your $75 new patient gift card.
         </motion.p>
 
         <motion.form
@@ -81,9 +81,9 @@ const LeadForm = () => {
         </motion.form>
 
         <p className="text-muted-foreground text-[10px] mt-6 font-light leading-relaxed">
-          By submitting this form, you consent to being contacted by Refined Aesthetics
-          via phone, email, or text message regarding your inquiry. Your information
-          will never be shared with third parties.
+          I agree to terms & conditions provided by Refined Aesthetics. By providing
+          my phone number, I agree to receive promotional and appointment-related text
+          messages from the business.
         </p>
       </div>
     </section>

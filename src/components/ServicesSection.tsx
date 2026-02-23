@@ -7,21 +7,21 @@ import serviceBody from "@/assets/service-body.jpg";
 const services = [
   {
     image: serviceInjectables,
-    title: "Wrinkle Relaxers & Dermal Fillers",
+    title: "BOTOX®, DAXXIFY® & Fillers",
     description:
-      "Smooth fine lines and restore youthful volume with expertly administered Botox and Juvéderm for a refreshed, natural look.",
+      "BOTOX® & DAXXIFY® provide solutions for many signs of aging, while fillers and Skinvive restore volume, improve facial symmetry, and return balance to your face.",
   },
   {
     image: serviceSkin,
-    title: "Advanced Skin Treatments",
+    title: "Light Therapy, Lasers & Peels",
     description:
-      "Reveal radiant, luminous skin through our curated menu of chemical peels, microneedling, and laser rejuvenation therapies.",
+      "Repair and renew damaged skin with our advanced light therapy, laser treatments, and chemical peels for a radiant, rejuvenated complexion.",
   },
   {
     image: serviceBody,
-    title: "Body Contouring & Sculpting",
+    title: "Therapeutic Skincare",
     description:
-      "Achieve your ideal silhouette with non-invasive body sculpting treatments that contour and refine without downtime.",
+      "Products backed by true science that complement non-surgical treatments. Our experienced skincare professionals create a customized regimen for your skin's needs.",
   },
 ];
 

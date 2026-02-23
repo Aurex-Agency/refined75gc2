@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import logo from "@/assets/ra-logo.jpg";
 
 const Footer = () => {
   return (
@@ -6,12 +7,10 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           <div>
-            <p className="font-serif text-xl tracking-widest text-foreground uppercase mb-4">
-              Refined <span className="text-primary">Aesthetics</span>
-            </p>
+            <img src={logo} alt="Refined Aesthetics" className="h-16 mb-4" />
             <p className="text-muted-foreground text-sm font-light leading-relaxed">
-              Where science meets artistry. Elevating your natural beauty with
-              precision and care.
+              Feel beautiful, look beautiful. Experience the very best in
+              advanced aesthetic procedures.
             </p>
           </div>
 
@@ -20,9 +19,8 @@ const Footer = () => {
               Visit Us
             </h4>
             <div className="text-muted-foreground text-sm font-light space-y-1">
-              <p>1200 Wilshire Boulevard, Suite 450</p>
-              <p>Beverly Hills, CA 90210</p>
-              <p className="mt-3">(310) 555-0178</p>
+              <p>Leesburg, VA</p>
+              <p className="mt-3">(703) 794-5689</p>
             </div>
           </div>
 
@@ -59,7 +57,7 @@ const Footer = () => {
         <div className="gold-divider mt-12 mb-8" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-xs font-light">
-          <p>© 2026 Refined Aesthetics. All rights reserved.</p>
+          <p>© 2026 Refined Aesthetics Med Spa. All rights reserved.</p>
           <a href="#" className="hover:text-primary transition-colors">
             Privacy Policy
           </a>
