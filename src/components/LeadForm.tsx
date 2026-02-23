@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { toast } from "sonner";
+import logo from "@/assets/ra-logo.png";
 
 const LeadForm = () => {
   const ref = useRef(null);
@@ -18,8 +19,16 @@ const LeadForm = () => {
   };
 
   return (
-    <section ref={ref} id="book" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6 max-w-xl text-center">
+    <section ref={ref} id="book" className="relative py-24 md:py-32 overflow-hidden" style={{ backgroundColor: 'hsl(212 45% 9%)' }}>
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage: `url(${logo})`,
+          backgroundSize: '80px 80px',
+          backgroundRepeat: 'repeat',
+        }}
+      />
+      <div className="relative z-10 container mx-auto px-6 max-w-xl text-center">
         <div className="gold-divider mb-16" />
 
         <motion.h2
