@@ -1,13 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import baBotox from "@/assets/ba-botox.webp";
-import baInjectables from "@/assets/ba-injectables.webp";
-import baFillers from "@/assets/ba-fillers.webp";
+import baSkincare from "@/assets/ba-skincare.webp";
+import baTreatment from "@/assets/ba-treatment.webp";
 
 const results = [
   { image: baBotox, treatment: "BOTOX® & DAXXIFY®", concern: "Fine Lines & Wrinkles" },
-  { image: baInjectables, treatment: "Advanced Injections", concern: "Facial Rejuvenation" },
-  { image: baFillers, treatment: "Fillers & Skinvive", concern: "Volume & Symmetry" },
+  { image: baSkincare, treatment: "Therapeutic Skincare", concern: "Radiance & Rejuvenation" },
+  { image: baTreatment, treatment: "Advanced Treatments", concern: "Precision & Results" },
 ];
 
 const BeforeAfterSection = () => {
