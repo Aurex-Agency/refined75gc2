@@ -1,22 +1,21 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { toast } from "sonner";
+import { useRef, useEffect } from "react";
 import logo from "@/assets/ra-logo.png";
 
 const LeadForm = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [form, setForm] = useState({ name: "", email: "", phone: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name.trim() || !form.email.trim() || !form.phone.trim()) {
-      toast.error("Please fill in all fields.");
-      return;
-    }
-    toast.success("Thank you! We'll be in touch shortly to schedule your consultation.");
-    setForm({ name: "", email: "", phone: "" });
-  };
+  useEffect(() => {
+    // Load GHL form embed script
+    const script = document.createElement("script");
+    script.src = "https://link.alphacrm.io/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <section ref={ref} id="book" className="relative py-24 md:py-32 overflow-hidden" style={{ backgroundColor: 'hsl(212 45% 9%)' }}>
@@ -50,50 +49,29 @@ const LeadForm = () => {
           your $75 new patient gift card.
         </motion.p>
 
-        <motion.form
-          onSubmit={handleSubmit}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="space-y-5"
         >
-          <input
-            type="text"
-            placeholder="Full Name"
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-            maxLength={100}
-            className="w-full bg-secondary border border-border px-5 py-4 text-foreground text-sm font-sans placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+          <iframe
+            src="https://link.alphacrm.io/widget/form/eRczUcfB3QlUQV8iep2B"
+            style={{ width: "100%", height: "626px", border: "none", borderRadius: "3px" }}
+            id="inline-eRczUcfB3QlUQV8iep2B"
+            data-layout='{"id":"INLINE"}'
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="$75 OFF New LP 75gc2"
+            data-height="626"
+            data-layout-iframe-id="inline-eRczUcfB3QlUQV8iep2B"
+            data-form-id="eRczUcfB3QlUQV8iep2B"
+            title="$75 OFF New LP 75gc2"
           />
-          <input
-            type="email"
-            placeholder="Email Address"
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-            maxLength={255}
-            className="w-full bg-secondary border border-border px-5 py-4 text-foreground text-sm font-sans placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-          />
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            value={form.phone}
-            onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            maxLength={20}
-            className="w-full bg-secondary border border-border px-5 py-4 text-foreground text-sm font-sans placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-          />
-          <button
-            type="submit"
-            className="w-full bg-primary text-primary-foreground py-4 text-sm font-sans font-semibold tracking-widest uppercase hover:bg-gold-light transition-colors duration-300"
-          >
-            Claim My $75 Gift Card
-          </button>
-        </motion.form>
-
-        <p className="text-muted-foreground text-[10px] mt-6 font-light leading-relaxed">
-          I agree to terms & conditions provided by Refined Aesthetics. By providing
-          my phone number, I agree to receive promotional and appointment-related text
-          messages from the business.
-        </p>
+        </motion.div>
       </div>
     </section>
   );
