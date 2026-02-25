@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import founderImage from "@/assets/sarah-safa.jpg";
+import teamPhoto from "@/assets/team-photo.jpg";
 import { Check } from "lucide-react";
 
 const differentiators = [
@@ -45,8 +45,8 @@ const AuthoritySection = () => {
             className="overflow-hidden"
           >
             <img
-              src={founderImage}
-              alt="Sarah Safa, MS, PA-C — Owner and Lead Practitioner at Refined Aesthetics"
+              src={teamPhoto}
+              alt="The Refined Aesthetics team of expert practitioners"
               className="w-full aspect-[3/4] object-cover"
               loading="lazy"
             />
