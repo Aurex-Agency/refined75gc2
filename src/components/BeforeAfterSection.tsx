@@ -1,12 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import baBotox from "@/assets/ba-botox.webp";
+import baConsultation from "@/assets/ba-consultation.jpg";
 import baLaser from "@/assets/ba-laser.jpg";
 import baInjectable from "@/assets/ba-injectable-male.jpg";
 import logo from "@/assets/ra-logo.png";
 
 const results = [
-  { image: baBotox, treatment: "BOTOX® & DAXXIFY®", concern: "Fine Lines & Wrinkles" },
+  { image: baConsultation, treatment: "BOTOX® & DAXXIFY®", concern: "Fine Lines & Wrinkles" },
   { image: baLaser, treatment: "Laser Treatments", concern: "Radiance & Rejuvenation" },
   { image: baInjectable, treatment: "Advanced Injectables", concern: "Precision & Results" },
 ];
