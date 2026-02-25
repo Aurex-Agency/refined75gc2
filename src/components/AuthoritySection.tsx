@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import teamPhoto from "@/assets/team-photo.jpg";
+import teamPhoto from "@/assets/team-scrubs.jpg";
 import { Check } from "lucide-react";
 
 const differentiators = [
