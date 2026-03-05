@@ -1,25 +1,29 @@
+import { lazy, Suspense } from "react";
 import StickyNav from "@/components/StickyNav";
 import HeroSection from "@/components/HeroSection";
-import EmpathySection from "@/components/EmpathySection";
-import ServicesSection from "@/components/ServicesSection";
-import BeforeAfterSection from "@/components/BeforeAfterSection";
-import AuthoritySection from "@/components/AuthoritySection";
-import LeadForm from "@/components/LeadForm";
-import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
+
+const EmpathySection = lazy(() => import("@/components/EmpathySection"));
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const BeforeAfterSection = lazy(() => import("@/components/BeforeAfterSection"));
+const AuthoritySection = lazy(() => import("@/components/AuthoritySection"));
+const LeadForm = lazy(() => import("@/components/LeadForm"));
+const FAQSection = lazy(() => import("@/components/FAQSection"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   return (
     <main>
       <StickyNav />
       <HeroSection />
-      <EmpathySection />
-      <ServicesSection />
-      <BeforeAfterSection />
-      <AuthoritySection />
-      <LeadForm />
-      <FAQSection />
-      <Footer />
+      <Suspense fallback={null}>
+        <EmpathySection />
+        <ServicesSection />
+        <BeforeAfterSection />
+        <AuthoritySection />
+        <LeadForm />
+        <FAQSection />
+        <Footer />
+      </Suspense>
     </main>
   );
 };
